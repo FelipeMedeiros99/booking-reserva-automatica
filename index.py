@@ -16,5 +16,5 @@ if __name__ == "__main__":
         except Exception as err:
             print(err)
             break
-        
+
     # pyinstaller --onefile --windowed --icon=booking.ico index.py

@@ -3,3 +3,4 @@ __pycache__
 modelo.txt
 build
 dist
+index.spec
