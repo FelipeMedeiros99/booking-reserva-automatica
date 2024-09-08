@@ -13,7 +13,6 @@ if __name__ == "__main__":
         try:
             dados_filtrados = janela_principal(ler_arquivo())
             janela_com_os_filtros(dados_filtrados)
-
         
         except Exception as err:
             print(err)

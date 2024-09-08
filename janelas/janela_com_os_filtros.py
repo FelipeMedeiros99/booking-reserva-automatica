@@ -4,7 +4,7 @@ from pyperclip import copy
 
 # modulos internos
 from layouts.layout_janela_com_filtros import layout_janela_com_filtros
-
+from automacao.automacao_completa import automacao_completa
 
 
 def janela_com_os_filtros(dados):
@@ -23,5 +23,4 @@ def janela_com_os_filtros(dados):
 
         if botoes == 'Reservar': 
             janela.close()
-            
-            print("partiu")
+            automacao_completa(dados)
