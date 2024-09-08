@@ -21,22 +21,5 @@ def janela_com_os_filtros(dados):
             janela.close()
             break
 
-        
-
-        elif botoes == 'check-in0':
-            copy(dados['check-in'])
-
-        elif botoes == 'check-out1':
-            copy(dados['check-out'])
-
-        elif botoes == 'nome2':
-            copy(dados['nome'])
-            
-        elif botoes == 'telefone3':
-            copy(dados['telefone'])
-
-        elif botoes == 'voucher4':
-            copy(dados['voucher'])
-
-        elif botoes == 'email5':
-            copy(dados['email'])
+        if botoes == 'Reservar': 
+            print("partiu")

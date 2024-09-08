@@ -1,4 +1,4 @@
-from PySimpleGUI import Text, Window, Multiline, WINDOW_CLOSED, Button
+from PySimpleGUI import Window, WINDOW_CLOSED
 
 # modulos internos
 from layouts.layout_janela_principal import layout_janela_principal
@@ -21,9 +21,7 @@ def janela_principal(dados=''):
             janela['informacoes'].update('')
 
         if botoes == 'confirmar':
-
             dados_organizados = organizar_filtros_em_objeto(dados["informacoes"])
-            
             janela.close()
-            
+
             return dados_organizados
