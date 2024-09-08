@@ -1,5 +1,4 @@
-from pyautogui import hotkey, press, click
-from time import sleep
+from pyautogui import press, click
 
 def selecionar_faturamento():
     
@@ -7,14 +6,12 @@ def selecionar_faturamento():
     tipo_empresa = (291, 244)
 
     # navegar até o dropdown
-    click(dropdown_faturamento)
+    click(dropdown_faturamento, interval=0.2)
     # seleciona opcão empresa
-    click(tipo_empresa)
+    click(tipo_empresa, interval=0.2)
     # confirma
-    press("enter")
+    press("enter", interval=0.2)
 
 
-if __name__ == "__main__":
-    sleep(3)
-    selecionar_faturamento()
+
 

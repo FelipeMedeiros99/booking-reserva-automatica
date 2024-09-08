@@ -1,9 +1,10 @@
+from PySimpleGUI import Popup
 from automacao.verificar_se_janela_esta_aberta import verificar_se_janela_esta_aberta
 from automacao.selecionar_faturamento import selecionar_faturamento
 from automacao.selecionar_opcoes_cabecalho import selecionar_opcoes_cabecalho
 from automacao.preencher_datas import preencher_datas
 from automacao.preencher_nome import preencher_nome
-
+from automacao.preencher_dados_da_segunda_janela import preencher_dados_da_segunda_janela
 from time import sleep
 
 
@@ -25,6 +26,8 @@ def automacao_completa(dados):
         selecionar_opcoes_cabecalho()
         preencher_datas(dados)
         preencher_nome(dados["nome"])
+        Popup("Aguardando segunda janela")
+        preencher_dados_da_segunda_janela(dados)
     except:
         pass
 
