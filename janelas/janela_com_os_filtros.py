@@ -22,4 +22,6 @@ def janela_com_os_filtros(dados):
             break
 
         if botoes == 'Reservar': 
+            janela.close()
+            
             print("partiu")
