@@ -3,7 +3,7 @@ from PySimpleGUI import  Window, WINDOW_CLOSED
 from pyperclip import copy
 
 # modulos internos
-from layouts.layout_janela_principal import layout_janela_principal
+from layouts.layout_janela_com_filtros import layout_janela_com_filtros
 from filtros.filtrar_data import filtrar_data
 from filtros.filtrar_email import filtrar_email
 from filtros.filtrar_nome import filtrar_nome
@@ -12,6 +12,8 @@ from filtros.filtrar_voucher import filtrar_voucher
 
 
 def janela_com_os_filtros(dados=""):
+
+    # filtrando dados
     datas = filtrar_data(dados)
     checkin = datas[0]
     checkout = datas[1]
@@ -20,8 +22,9 @@ def janela_com_os_filtros(dados=""):
     email = filtrar_email(dados)[0]
     telefone = filtrar_numero(dados)[0]
 
-    layout = layout_janela_principal(checkin, checkout, nome, telefone, voucher, email)
-    
+    # layout da janela secundário
+    layout = layout_janela_com_filtros(checkin, checkout, nome, telefone, voucher, email)
+
     janela = Window('Copiar informações', layout)
 
     while True:

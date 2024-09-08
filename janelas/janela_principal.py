@@ -1,11 +1,9 @@
 from PySimpleGUI import Text, Window, Multiline, WINDOW_CLOSED, Button
-
+from layouts.layout_janela_principal import layout_janela_principal
 
 def janela_principal(dados=''):
     
-    layout = [[Text('Elementos da reserva')],
-            [Multiline(dados, size=(40, 7), key='informacoes')],
-            [Button('confirmar'), Button('Limpar'), Button('Fechar')]]
+    layout = layout_janela_principal(dados)
 
     janela = Window("Automação booking", layout)
 
