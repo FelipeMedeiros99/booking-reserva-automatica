@@ -2,3 +2,4 @@ pysimplegui
 pyperclip
 pyautogui
 pillow
+pyinstaller
